@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+</head>
+
+<body>
+    <h1>Recipe Generator</h1>
+
+    <form action="/generate_recipe" method="post">
+        <label for="input_resep">Masukkan Nama Masakan:</label>
+        <input type="text" id="input_resep" name="input_resep" required>
+        <button type="submit">Generate Recipe</button>
+    </form>
+
+    {% if input_resep %}
+    <h2>Input Resep:</h2>
+    <p>{{ input_resep }}</p>
+    {% endif %}
+
+    {% if generated_recipe %}
+    <h2>Generated Recipe:</h2>
+    <p>{{ generated_recipe }}</p>
+    {% endif %}
+
+    {% if error %}
+    <h2>Error:</h2>
+    <p>{{ error }}</p>
+    {% endif %}
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Recommendation</title>
+</head>
+<body>
+    <h1>Recipe Recommendation</h1>
+
+    <form method="post" action="/recommend">
+        <label for="ingredients">Enter Ingredients (comma-separated):</label>
+        <input type="text" id="ingredients" name="ingredients" required>
+        <button type="submit">Get Recommendations</button>
+    </form>
+
+    {% if input_ingredients %}
+        <h2>Input Ingredients:</h2>
+        <p>{{ input_ingredients | join(', ') }}</p>
+    {% endif %}
+
+    {% if recommendations %}
+        <h2>Recommended Recipes:</h2>
+        <ul>
+            {% for recipe in recommendations %}
+                <li>{{ recipe }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Tambahkan tautan unduh JSON -->
+        <a href="/download_json?ingredients={{ input_ingredients | join(',') }}" download>
+            <button>Download Recommendations (JSON)</button>
+        </a>
+    {% endif %}
+
+    {% if error_message %}
+        <h2>Error:</h2>
+        <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
