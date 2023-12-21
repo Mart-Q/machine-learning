@@ -2,6 +2,7 @@
 
 This endpoint provides a function for recipe recommendation according to user input. The user can send a food ingredient name to the API, 
 and the API will return a recipe recommendation The API uses a pre-trained object detection model to recommend a suitable recipe.
+
 The ML team consist of:
 1. Rendra Baskoro Tuharea (M183BSY0890)
 2. Mufidatul Ngazizah (M183BSX1681)
