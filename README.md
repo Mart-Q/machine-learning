@@ -56,12 +56,5 @@ And the rest of model for develop is:
 - Daily Recommended recipe
 - Recipe Generator
 
-   [Cloud Function]: <https://cloud.google.com/functions/docs>
-   [Compute Engine]: <https://cloud.google.com/compute/docs?hl=id>
-   [Cloud Storage]: <https://cloud.google.com/storage>
-
-For More Documentation:
-- https://documenter.getpostman.com/view/30300359/2s9YkgEm9X
-- https://documenter.getpostman.com/view/30300359/2s9Ykn8hEU
 
 
